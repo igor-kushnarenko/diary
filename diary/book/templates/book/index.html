@@ -1,0 +1,12 @@
+{% extends 'book/layout.html' %}
+{% block title %}Главная{% endblock %}
+{% block content%}
+{% for post in posts %}
+    <div>
+        <h5><a href="{{ r.get_absolute_url }}">{{post.rubric}}</a></h5>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <p>{{ post.published|date:"d.m.Y H.i.s" }}</p>
+    </div>
+{% endfor %}
+{% endblock %}

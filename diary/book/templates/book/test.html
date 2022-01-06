@@ -1,0 +1,23 @@
+{% extends 'book/layout.html' %}
+{% block title %}TEST{% endblock %}
+{% block content %}
+<latest>
+    <h3>Последние записи</h3>
+    {% for b in latest %}
+        <p>{{b.title}}</p>
+        <p>{{b.content}}</p>
+        <p>{{p.published}}</p>
+        <br>
+        <hr>
+    {% endfor %}
+</latest>
+<h2>Все рубрики</h2>
+{% for r in rubrics %}
+    {{r.name}}
+<br>
+{% endfor %}
+<h2>Счетчик объявлений</h2>
+{{ count }} шт.
+<br>
+<hr>
+{% endblock%}

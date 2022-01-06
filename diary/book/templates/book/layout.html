@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'book/style.css' %}">
+</head>
+<body>
+<header><h1>Dark Diary</h1></header>
+<nav>
+	<a href="{% url 'index' %}">Главная</a>
+	{% for r in rubrics %}
+		<a href="{% url 'by_rubric' r.pk %}">{{ r.name }}</a>
+	{% endfor %}
+	<h5>Всего записей: {{ count }}</h5>
+	<a href="{% url 'create' %}">Добавить</a>
+	<hr>
+	<a href="{% url 'test' %}">Тестовая страница</a>
+</nav>
+<section>
+	{% block content %}{% endblock %}
+</section>
+</body>
+</html>

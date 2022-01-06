@@ -1,0 +1,9 @@
+{% extends 'book/layout.html' %}
+{% block title %}Главная{% endblock %}
+{% block content%}
+{% for post in posts %}
+	<h2>{{ post.title }}</h2>
+	<p>{{ post.content }}</p>
+	<h6>{{ post.published|date:"d.m.Y H:i:s" }}</h6>
+{% endfor %}
+{% endblock %}

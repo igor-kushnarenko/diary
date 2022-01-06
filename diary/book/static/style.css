@@ -1,0 +1,25 @@
+header h1 {
+	font-size: 40pt;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: yellow;
+}
+
+nav {
+	font-size: 15pt;
+	width: 150px;
+	float: left;
+}
+
+nav a {
+	display: block;
+	margin: 10px 0px;
+}
+
+section {
+	margin-left: 170px;
+}
+
+latest {
+    background-color: blue;
+}

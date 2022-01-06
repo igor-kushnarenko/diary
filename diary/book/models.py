@@ -21,7 +21,7 @@ class Post(models.Model):
         default='',
         null=False,
         verbose_name='Пользователь',
-        related_name='bill'
+        related_name='post'
     )
 
 

@@ -1,0 +1,12 @@
+{% extends 'book/layout.html' %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Добавить">
+    </form>
+<form>
+    <a href="{% url 'index' %}">Отмена</a>
+</form>
+{% endblock %}
