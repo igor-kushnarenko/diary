@@ -24,6 +24,19 @@ class Post(models.Model):
         related_name='post'
     )
 
+    def __str__(self):
+        """Магический метод для читабельного отображения модели в shell"""
+        return self.title
+
+    class Meta:
+        """
+        Вложенный класс глобальных настроек модели, отображаемые названия и сортировка
+        """
+        ordering = ['-published']
+        verbose_name_plural = 'Записи'
+        verbose_name = 'Запись'
+        get_latest_by = 'published'  # теперь метод latest() вернет самую позднюю запись
+
 
 class Rubric(models.Model):
     name = models.CharField(max_length=20, db_index=True, verbose_name='Название')

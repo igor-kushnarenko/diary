@@ -6,7 +6,7 @@
         <h5><a href="{{ r.get_absolute_url }}">{{post.rubric}}</a></h5>
         <h2>{{ post.title }}</h2>
         <p>{{ post.content }}</p>
-        <p>{{ post.published|date:"d.m.Y H.i.s" }}</p>
+        <p><h5>{{ post.published|date:"d.m.Y H.i.s" }}</h5></p>
     </div>
 {% endfor %}
 {% endblock %}
